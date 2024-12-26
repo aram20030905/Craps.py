@@ -1,10 +1,16 @@
 import random
 
-while True:
+def roll():
     oneNumber=random.randrange(1,7)
     twoNumber=random.randrange(1,7)
     generalsum=oneNumber+twoNumber
     print("The sum of dice is"+" "+str(oneNumber) + " + " + str(twoNumber) + " = " + str(generalsum))
+    return generalsum
+
+
+while True:
+    generalsum = roll()
+
 
     if generalsum == 7 or generalsum == 11:
         print("You won")
@@ -19,10 +25,7 @@ while True:
         print("Now your goal number is"+" "+str(goal))
 
         while True:
-            oneNumber = random.randrange(1,7)
-            twoNumber = random.randrange(1,7)
-            generalsum = oneNumber + twoNumber
-            print("The sum of dice is"+" "+str(oneNumber) + " + " + str(twoNumber) + " = " + str(generalsum))
+            generalsum = roll()
             if generalsum == goal:
                 print("You won")
                 break
@@ -35,5 +38,8 @@ while True:
 
 
         
+
+
+
 
 
